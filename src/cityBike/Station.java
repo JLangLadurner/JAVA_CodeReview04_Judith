@@ -1,22 +1,25 @@
 package cityBike;
 
+
 import java.util.ArrayList;
 
 public class Station {
 
-    public static int counter;
 
-    public String stationId;
+    public static int counter = 1;
+    public Integer stationId;
     public String location;
-    public int capacity;
-    ArrayList<String>station;
+    ArrayList<String>bikes;
 
-    Station(String location, int capacity, ArrayList<String>station){
-        counter++;
-        this.stationId = "stationId"+counter;
+    Station(String location){
+        this.stationId = counter++;
         this.location = location;
-        this.capacity = 0;
+        this.bikes = new ArrayList<>();
+
     }
 
+    public void addBike (ArrayList<String>bikes){
+
+    }
 
 }

@@ -23,6 +23,9 @@ public class User {
         ArrayList<String>userRentBike = new ArrayList<>();
     }
 
-
+    //adds bikes to User
+    public void setUsrBikes(String bikeId){
+        userRentBike.add(bikeId);
+    }
 
 }

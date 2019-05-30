@@ -5,13 +5,13 @@ import java.util.GregorianCalendar;
 
 public class Bike {
 
-    public static int counter;
 
-    public String bikeId;
+    public Integer bikeId;
     public String color;
     GregorianCalendar rentStart;
     GregorianCalendar rentEnd;
     public Status aStatus;
+    public static Integer counter =1;
     public enum Status{
         CanBeRented,
         CanNotBeRented,
@@ -20,11 +20,12 @@ public class Bike {
     }
 
     Bike(String color, Status aStatus){
-        counter++;
-        this.bikeId = "bikeId"+counter;
+        this.bikeId = counter++;
         this.color = color;
         this.aStatus= aStatus;
         GregorianCalendar rentStart = null;
         GregorianCalendar rentEnd = null;
     }
+
+
 }

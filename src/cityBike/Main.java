@@ -1,6 +1,7 @@
 package cityBike;
 
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -37,29 +38,17 @@ public class Main {
         bikes.put("bikeId7", bike7);
         bikes.put("bikeId8", bike8);
 
-        ArrayList<String>stat1 = new ArrayList<>();
-        stat1.add("bikeId1");
-        stat1.add("bikeId2");
-        stat1.add("bikeId3");
-        stat1.add("bikeId4");
-        stat1.add("bikeId5");
 
-        ArrayList<String>stat2 = new ArrayList<>();
-        stat2.add("bikeId6");
-        stat2.add("bikeId8");
-
-        ArrayList<String>stat3 = new ArrayList<>();
-        stat3.add("bikeId7");
-        stat3.add("bikeId8");
-
-        Station station1 = new Station("Schwedenplatz",5,stat1);
-        Station station2 = new Station("Karlsplatz",10, stat2);
-        Station station3 = new Station("Stephansplatz", 5,stat3);
+        Station station1 = new Station("Schwedenplatz");
+        Station station2 = new Station("Karlsplatz");
+        Station station3 = new Station("Stephansplatz");
 
         HashMap<String, Station> stations = new HashMap<>();
         stations.put("stationId1",station1);
         stations.put("stationId2", station2);
         stations.put("stationId3", station3);
+
+        System.out.println();
 
     }
     }
