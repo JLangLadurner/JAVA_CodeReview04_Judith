@@ -1,6 +1,7 @@
 package cityBike;
 
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Main {
@@ -36,14 +37,24 @@ public class Main {
         bikes.put("bikeId7", bike7);
         bikes.put("bikeId8", bike8);
 
-        Station stat1 = new Station("Karlsplatz",5);
-        Station stat2 = new Station("Schwedenplatz",10);
-        Station stat3 = new Station("Stephansplatz", 10);
+        ArrayList<String>stat1 = new ArrayList<>();
+        stat1.add("bikeId1");
+        stat1.add("bikeId2");
+        stat1.add("bikeId3");
+        stat1.add("bikeId4");
+        stat1.add("bikeId5");
 
-        HashMap<String, Station>stations = new HashMap<>();
-        stations.put("stationId1", stat1);
-        stations.put("stationId2", stat2);
-        stations.put("stationId3", stat3);
+        ArrayList<String>stat2 = new ArrayList<>();
+        stat2.add("bikeId6");
+        stat2.add("bikeId7");
+        stat2.add("bikeId8");
+
+        Station station1 = new Station("Schwedenplatz",5,stat1);
+        Station station2 = new Station("Karlsplatz",10, stat2);
+
+        HashMap<String, Station> stations = new HashMap<>();
+        stations.put("stationId1",station1);
+        stations.put("stationId2", station2);
 
     }
     }

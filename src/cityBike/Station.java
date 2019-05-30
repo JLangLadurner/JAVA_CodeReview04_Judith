@@ -11,7 +11,7 @@ public class Station {
     public int capacity;
     ArrayList<String>station;
 
-    Station(String location, int capacity){
+    Station(String location, int capacity, ArrayList<String>station){
         counter++;
         this.stationId = "stationId"+counter;
         this.location = location;
