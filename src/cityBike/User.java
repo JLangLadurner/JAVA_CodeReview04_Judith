@@ -1,31 +1,30 @@
 package cityBike;
 
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 
 public class User {
 
-    static int counter;
 
-    public String userId;
+    public static Integer counter =1;
+    public Integer userId;//id was not defined as integer according to assignment
     public String userFirstName;
     public String userLastName;
     public String userEmail;
-    public String userPass;
+
     ArrayList<String> userRentBike;
 
-    User (String userFirstName, String userLastName, String userEmail, String userPass){
-        counter++;
-        this.userId = "userId"+counter;
+    User (String userFirstName, String userLastName, String userEmail ){
+
+        this.userId = counter++;
         this.userFirstName = userFirstName;
         this.userLastName = userLastName;
         this.userEmail = userEmail;
-        this.userPass = userPass;
         ArrayList<String>userRentBike = new ArrayList<>();
     }
 
-    //adds bikes to User
-    public void setUsrBikes(String bikeId){
-        userRentBike.add(bikeId);
+
     }
 
-}
+

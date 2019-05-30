@@ -17,9 +17,13 @@ public class Station {
         this.bikes = new ArrayList<>();
 
     }
-
+    //method to add bikes to stations
     public void addBike (Integer bikeId){
            this.bikes.add(bikeId);
+    }
+    //method to remove bike from stations
+    public void removeBike (Integer bikeId){
+        this.bikes.remove(bikeId);
     }
 
 }
