@@ -9,7 +9,7 @@ public class Station {
     public static int counter = 1;
     public Integer stationId;
     public String location;
-    ArrayList<String>bikes;
+    ArrayList<Integer>bikes;
 
     Station(String location){
         this.stationId = counter++;
@@ -18,8 +18,8 @@ public class Station {
 
     }
 
-    public void addBike (ArrayList<String>bikes){
-
+    public void addBike (Integer bikeId){
+           this.bikes.add(bikeId);
     }
 
 }

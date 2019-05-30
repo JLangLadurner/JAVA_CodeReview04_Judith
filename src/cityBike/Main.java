@@ -19,39 +19,49 @@ public class Main {
         users.put("userId3", usr3);
 
 
-        Bike bike1 = new Bike ("red", Bike.Status.CanBeRented);
-        Bike bike2 = new Bike ("blue", Bike.Status.CanBeRented);
-        Bike bike3 = new Bike ("white", Bike.Status.CanNotBeRented);
-        Bike bike4 = new Bike ("black", Bike.Status.Discarded);
-        Bike bike5 = new Bike ("purple", Bike.Status.InService);
-        Bike bike6 = new Bike ("green", Bike.Status.CanBeRented);
-        Bike bike7 = new Bike ("white", Bike.Status.CanBeRented);
-        Bike bike8 = new Bike ("rose", Bike.Status.InService);
+        Bike bike1 = new Bike("red", Bike.Status.CanBeRented);
+        Bike bike2 = new Bike("blue", Bike.Status.CanBeRented);
+        Bike bike3 = new Bike("white", Bike.Status.CanNotBeRented);
+        Bike bike4 = new Bike("black", Bike.Status.Discarded);
+        Bike bike5 = new Bike("purple", Bike.Status.InService);
+        Bike bike6 = new Bike("green", Bike.Status.CanBeRented);
+        Bike bike7 = new Bike("white", Bike.Status.CanBeRented);
+        Bike bike8 = new Bike("rose", Bike.Status.InService);
 
-        HashMap<String, Bike> bikes = new HashMap<>();
-        bikes.put("bikeId1", bike1);
-        bikes.put("bikeId2", bike2);
-        bikes.put("bikeId3", bike3);
-        bikes.put("bikeId4", bike4);
-        bikes.put("bikeId5", bike5);
-        bikes.put("bikeId6", bike6);
-        bikes.put("bikeId7", bike7);
-        bikes.put("bikeId8", bike8);
+        HashMap<Integer, Bike> bikes = new HashMap<>();
+        bikes.put(1, bike1);
+        bikes.put(2, bike2);
+        bikes.put(3, bike3);
+        bikes.put(4, bike4);
+        bikes.put(5, bike5);
+        bikes.put(6, bike6);
+        bikes.put(7, bike7);
+        bikes.put(8, bike8);
 
-
+    //creates Station
         Station station1 = new Station("Schwedenplatz");
         Station station2 = new Station("Karlsplatz");
         Station station3 = new Station("Stephansplatz");
 
-        HashMap<String, Station> stations = new HashMap<>();
-        stations.put("stationId1",station1);
-        stations.put("stationId2", station2);
-        stations.put("stationId3", station3);
+    //creates key and value for stations
+        HashMap<Integer, Station> stations = new HashMap<>();
+        stations.put(1, station1);
+        stations.put(2, station2);
+        stations.put(3, station3);
 
-        System.out.println();
+    //adds bikes to station
+        station1.addBike(1);
+        station1.addBike(2);
+        station1.addBike(3);
+        station2.addBike(4);
+        station2.addBike(5);
+        station2.addBike(6);
+        station2.addBike(7);
+
 
     }
     }
+
 
 
 
