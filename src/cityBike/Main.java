@@ -46,15 +46,20 @@ public class Main {
 
         ArrayList<String>stat2 = new ArrayList<>();
         stat2.add("bikeId6");
-        stat2.add("bikeId7");
         stat2.add("bikeId8");
+
+        ArrayList<String>stat3 = new ArrayList<>();
+        stat3.add("bikeId7");
+        stat3.add("bikeId8");
 
         Station station1 = new Station("Schwedenplatz",5,stat1);
         Station station2 = new Station("Karlsplatz",10, stat2);
+        Station station3 = new Station("Stephansplatz", 5,stat3);
 
         HashMap<String, Station> stations = new HashMap<>();
         stations.put("stationId1",station1);
         stations.put("stationId2", station2);
+        stations.put("stationId3", station3);
 
     }
     }

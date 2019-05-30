@@ -17,4 +17,6 @@ public class Station {
         this.location = location;
         this.capacity = 0;
     }
+
+
 }
