@@ -7,11 +7,11 @@ import java.util.GregorianCalendar;
 public class User {
 
 
-    public static Integer counter =1;
-    public Integer userId;//id was not defined as integer according to assignment
-    public String userFirstName;
-    public String userLastName;
-    public String userEmail;
+    private static Integer counter =1;
+    private Integer userId;
+    private String userFirstName;
+    private String userLastName;
+
 
     ArrayList<String> userRentBike;
 
@@ -20,11 +20,28 @@ public class User {
         this.userId = counter++;
         this.userFirstName = userFirstName;
         this.userLastName = userLastName;
-        this.userEmail = userEmail;
+
         ArrayList<String>userRentBike = new ArrayList<>();
     }
 
-
+    public int getUserId(){
+        return this.userId;
     }
+
+    public String getUserFirstName(){
+       return this.userFirstName= userFirstName;
+    }
+
+    public void setUserFirstName(){
+        this.userFirstName=userFirstName;
+    }
+
+    public String getUserLastName(){
+        return this.userLastName;
+    }
+    public void setUserLastName(){
+        this.userLastName=userLastName;
+    }
+}
 
 

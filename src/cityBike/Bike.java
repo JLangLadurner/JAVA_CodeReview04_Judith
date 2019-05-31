@@ -6,12 +6,12 @@ import java.util.GregorianCalendar;
 public class Bike {
 
 
-    public Integer bikeId;
-    public String color;
+    private Integer bikeId;
+    private String color;
     GregorianCalendar rentStart;
     GregorianCalendar rentEnd;
-    public Status aStatus;
-    public static Integer counter =1;
+    private Status aStatus;
+    private static Integer counter =1;
     public enum Status{
         CanBeRented,
         CanNotBeRented,
@@ -27,5 +27,25 @@ public class Bike {
         GregorianCalendar rentEnd = null;
     }
 
+    public int getBikeId(){
+        return this.bikeId;
+    }
 
+    public void setBikeId(int bikeId){
+        this.bikeId=bikeId;
+    }
+
+    public String getColor(){
+        return this.color;
+    }
+
+    public Status getaStatus() {
+        return aStatus;
+    }
+
+    public void setaStatus(Status aStatus){
+        this.aStatus= aStatus;
+    }
 }
+
+
