@@ -62,6 +62,8 @@ public class Main {
         users.put(usr2.getUserId(), usr2);
         users.put(usr3.getUserId(), usr3);
 
+        //research:https://www.youtube.com/watch?v=HcjHJLEbtRs - Transaction Management Java
+        //https://www.youtube.com/watch?v=c3RVW3KGIIE - HashMaps in Java
 
         System.out.println("user: " + usr1.getCurrRentedBike());
         System.out.println("Station: "+ station1.getBikes().toString());
@@ -81,7 +83,7 @@ public class Main {
         //User :null
         //Station:[1, 3, 2]
 
-        
+
 
 
     }
