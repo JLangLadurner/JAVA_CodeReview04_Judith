@@ -9,14 +9,17 @@ public class Station {
     private static int counter = 1;
     private Integer stationId;
     private String location;
-    private ArrayList<Bike> bikesInStat;
+    private ArrayList<Integer> bikes;
 
     Station(String location) {
         this.stationId = counter++;
         this.location = location;
-        this.bikesInStat = new ArrayList<>();
+        this.bikes = new ArrayList<>();
 
     }
+
+    public Station() {
+    }               //to be able to check the station
 
     public int getStationId() {
         return this.stationId;
@@ -35,27 +38,30 @@ public class Station {
     }
 
 
-    public void setBikesInStat(ArrayList<Bike> bikesInStat) {
-        this.bikesInStat = bikesInStat;
-    }
-
-    public ArrayList<Bike> getBikesInStat() {
-        return this.bikesInStat;
+    public ArrayList<Integer> getBikes() {
+        return this.bikes;
     }
 
 
+    //adds bikes to station
+    public void addBike(Integer bikeId) {
+        this.bikes.add(bikeId);
+    }
 
-    //method to add bikes to stations if it is not already full
-    public void addBike(Bike bikeId) {
-        if (bikesInStat.size() >= 5) {
-            System.out.println("Sorry you can not add more bikes to this station");
+    //method to remove bike from stations
+    public void removeBike(Integer bikeId) {
+        this.bikes.remove(bikeId);
+    }
+
+    public void returnBike(Integer bikeId) {
+        if (this.bikes.size() <= 5) {
+            addBike(bikeId);
+            Main.checkUser(bikeId);
         } else {
-            this.bikesInStat.add(bikeId);
-        }
-       }
-
-        //method to remove bike from stations
-        public void removeBike (Bike bikeId){
-            this.bikesInStat.remove(bikeId);
+            System.out.println("Sorry this station is already full");
         }
     }
+}
+
+
+
