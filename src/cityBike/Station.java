@@ -19,7 +19,7 @@ public class Station {
     }
 
     public Station() {
-    }               //to be able to check the station
+    }               //to be able to checkStation()
 
     public int getStationId() {
         return this.stationId;

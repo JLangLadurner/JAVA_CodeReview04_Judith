@@ -24,7 +24,7 @@ public class Main {
         Bike bike7 = new Bike("white", Bike.Status.CanBeRented);
         Bike bike8 = new Bike("rose", Bike.Status.InService);
 
-
+        //create bikes Hashmap
         bikes.put(bike1.getBikeId(), bike1);
         bikes.put(bike2.getBikeId(), bike2);
         bikes.put(bike3.getBikeId(), bike3);
@@ -39,7 +39,7 @@ public class Main {
         Station station2 = new Station("Karlsplatz");
         Station station3 = new Station("Stephansplatz");
 
-        //creates Haschmap for station
+        //creates HashMap for station
 
         stations.put(station1.getStationId(), station1);
         stations.put(station2.getStationId(), station2);
@@ -54,10 +54,12 @@ public class Main {
         station2.addBike(6);
         station2.addBike(7);
 
+        //creates user
         User usr1 = new User("Otto", "Bismark");
         User usr2 = new User("Karin", "Bing");
         User usr3 = new User("Kurt", "Holz");
 
+        //puts user in a HashMap
         users.put(usr1.getUserId(), usr1);
         users.put(usr2.getUserId(), usr2);
         users.put(usr3.getUserId(), usr3);
@@ -82,9 +84,7 @@ public class Main {
         //output:
         //User :null
         //Station:[1, 3, 2]
-
-
-
+        
 
     }
 

@@ -29,10 +29,6 @@ public class Bike {
     }
 
 
-    public String getColor(){
-        return this.color;
-    }
-
     public Status getaStatus() {
         return aStatus;
     }
