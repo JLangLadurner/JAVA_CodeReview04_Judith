@@ -67,47 +67,53 @@ public class Main {
         //research:https://www.youtube.com/watch?v=HcjHJLEbtRs - Transaction Management Java
         //https://www.youtube.com/watch?v=c3RVW3KGIIE - HashMaps in Java
 
-        System.out.println("user: " + usr1.getCurrRentedBike());
-        System.out.println("Station: "+ station1.getBikes().toString());
         usr1.rentABike(2);
         System.out.println("user: " + usr1.getCurrRentedBike());
-        System.out.println("Station: " + station1.getBikes().toString());
-
-        //output:
-        //user: null
-        //Station: [1, 2, 3]
-        //user: 2
-        //Station: [1, 3]
+        System.out.println("Station 1: "+ station1.getBikes().toString());
         station1.returnBike(2);
-        System.out.println("User :" +  usr1.getCurrRentedBike());
-        System.out.println("Station:"+station1.getBikes().toString());
-        //output:
-        //User :null
-        //Station:[1, 3, 2]
-        
+
+        usr1.rentABike(3);
+        System.out.println("user: " + usr1.getCurrRentedBike());
+        System.out.println("Station 1: " + station1.getBikes().toString());
+        System.out.println(("Station 2: "+station2.getBikes().toString()));
+        station1.returnBike(3);
+        usr1.rentABike(5);
+        station1.returnBike(5);
+        System.out.println("user: " + usr1.getCurrRentedBike());
+        System.out.println("Station 1: " + station1.getBikes().toString());
+        System.out.println(("Station 2: "+station2.getBikes().toString()));
+        usr2.rentABike(7);
+        station1.returnBike(7);
+        System.out.println("Station 1: " + station1.getBikes().toString());
+        usr2.rentABike(6);
+        station3.returnBike(6);
+        System.out.println("Station 3: " + station3.getBikes().toString());
+
+
+        usr1.allBikesRentedByUser();
 
     }
 
     public static void checkStation(Integer bikeId) {
-        Station st = new Station();//create new station
+        Station station = new Station();//create new station
         for (Map.Entry<Integer, Station> entry : stations.entrySet()) {//check station hashmap
             if (entry.getValue().getBikes().contains(bikeId)) { //if there is a value...
-                st = entry.getValue();
+                station = entry.getValue();
                 break;
             }
         }
-        st.removeBike(bikeId);
+        station.removeBike(bikeId);
     }
 
-    public static void checkUser(Integer bikeId){
-        User user = new User();
+    public static void checkWhichUser(Integer bikeId){
+        User usr = new User();
         for(Map.Entry<Integer, User> entry: users.entrySet()){
-            if(entry.getValue().getCurrRentedBike()== bikeId){
-                user = entry.getValue();
+            if(entry.getValue().getCurrRentedBike() == bikeId){
+                usr = entry.getValue();
                 break;
             }
         }
-        user.removeBike(bikeId);
+        usr.removeBike(bikeId);
     }
 }
 

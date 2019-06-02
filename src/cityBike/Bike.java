@@ -1,8 +1,6 @@
 package cityBike;
 
 
-import java.util.GregorianCalendar;
-
 public class Bike {
 
 

@@ -21,27 +21,13 @@ public class Station {
     public Station() {
     }               //to be able to checkStation()
 
-    public int getStationId() {
+    public Integer getStationId() {
         return this.stationId;
     }
 
-    public void setStationId(int stationId) {
-        this.stationId = stationId;
-    }
-
-    public String getLocation() {
+    public String getLocation(){
         return this.location;
     }
-
-    public void setLocation(String location) {
-        this.location = location;
-    }
-
-
-    public ArrayList<Integer> getBikes() {
-        return this.bikes;
-    }
-
 
     //adds bikes to station
     public void addBike(Integer bikeId) {
@@ -53,10 +39,14 @@ public class Station {
         this.bikes.remove(bikeId);
     }
 
+    public ArrayList<Integer> getBikes() {
+        return this.bikes;
+    }
+
     public void returnBike(Integer bikeId) {
-        if (this.bikes.size() <= 5) {
+        if (this.bikes.size() < 5) {
             addBike(bikeId);
-            Main.checkUser(bikeId);
+            Main.checkWhichUser(bikeId);
         } else {
             System.out.println("Sorry this station is already full");
         }

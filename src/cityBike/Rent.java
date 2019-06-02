@@ -13,6 +13,7 @@ public class Rent {
         this.bikeId = bikeId;
         this.rentStart = rentStart;
     }
+
     public void setRentEnd(){
         this.rentEnd = (GregorianCalendar) Calendar.getInstance();
     }
